@@ -133,3 +133,33 @@ contactEmail.textContent = siteContent["contact"]["email"];
 
 let footerCopyright = document.querySelector("footer p");
 footerCopyright.textContent = siteContent["footer"]["copyright"];
+
+//new changes
+
+let navItems = document.querySelectorAll("nav a");
+navItems.forEach(function(element) {
+  element.style.color = "green";
+});
+
+let navContainer = document.querySelector("nav");
+
+let prependElement = document.createElement("a");
+prependElement.textContent = "Jeff";
+prependElement.style.color = "hotpink";
+
+let appendElement = document.createElement("a");
+appendElement.textContent = "Rocks";
+appendElement.style.color = "hotpink";
+
+navContainer.prepend(prependElement);
+navContainer.appendChild(appendElement);
+
+//stretch stuff
+
+navContainer.style.borderBottom = "2px dotted black";
+servicesTxt.style.color = "hotpink";
+visionTxt.style.fontFamily = "Calibri";
+
+navItems.forEach(element => {
+  element.style.textDecoraton = "line-through";
+});
